@@ -71,7 +71,6 @@ pipeline {
                         sh 'node ./jenkinsScripts/indexPushChanges.js Edgar Montagud missatge'
                     } catch (e) {
                         echo "Push Changes failed: ${e.getMessage()}"
-                        currentBuild.result = 'UNSTABLE'
                     }
                 }
             }
