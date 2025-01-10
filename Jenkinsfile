@@ -65,9 +65,12 @@ pipeline {
 
         stage('Push Changes') {
             steps {
-                withCredentials([usernamePassword(credentialsId: 'id_github', usernameVariable: 'GITHUB_USERNAME', passwordVariable: 'GITHUB_PASSWORD')]) {
-                    script {
-                        sh "node ./jenkinsScripts/indexPushChanges.js '${params.executor}' '${params.motiu}'"
+                script {
+                    try {
+                        sh 'node ./jenkinsScripts/indexPushChanges.js Edgar Montagud missatge'
+                    } catch (e) {
+                        echo "Push Changes failed: ${e.getMessage()}"
+                        currentBuild.result = 'UNSTABLE'
                     }
                 }
             }
@@ -86,7 +89,7 @@ pipeline {
             }
         }
 
-    }
+    
 
     post {
         always {
