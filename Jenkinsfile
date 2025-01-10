@@ -78,7 +78,7 @@ pipeline {
         stage('Deploy to Vercel') {
             when {
                 expression {
-                    expression { currentBuild.result == 'SUCCESS' || currentBuild.result == null }
+                    return currentBuild.result == 'SUCCESS' || currentBuild.result == null
                 }
             }
             steps {
@@ -87,6 +87,8 @@ pipeline {
                 }
             }
         }
+
+    }
 
     post {
         always {
