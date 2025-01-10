@@ -14,8 +14,7 @@
       "^.+\\.jsx?$": "babel-jest"
     },
     "testPathIgnorePatterns": [
-      "/node_modules/",
-      "/cypress/"
+      "/node_modules/"
     ]
   },
   "dependencies": {
