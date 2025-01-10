@@ -13,7 +13,7 @@ function runCommand(command) {
 }
 
 async function deployToVercel() {
-    const vercelToken = process.env.TOKEN_TOKEN;
+    const vercelToken = process.env.TOKEN_VERCEL;
     // const vercelOrgId = process.env.VERCEL_ORG_ID;
     // const vercelProjectId = process.env.VERCEL_PROJECT_ID;
 
