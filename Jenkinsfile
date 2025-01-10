@@ -46,7 +46,7 @@ pipeline {
         stage('Test') {
             steps {
                 script {
-                    env.RESULT_TEST_JEST = sh(script: 'npm run test', returnStatus: true)
+                    env.RESULT_TEST_JEST = sh(script: 'npm run cypress:run', returnStatus: true)
                 }
             }
         }
