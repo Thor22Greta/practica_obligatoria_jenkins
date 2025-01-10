@@ -1,6 +1,7 @@
 const fs = require("fs");
 
-let users = require("data/users.json");
+// Cambia la ruta a una ruta relativa adecuada desde helpers a data
+let users = require("../data/users.json");
 
 export const usersRepo = {
   getAll,
