@@ -17,7 +17,7 @@
       "/node_modules/",
       "/cypress/"
     ],
-    "testEnvironment": "node"  // Esta es la opción agregada para usar el entorno de Node.js
+    "testEnvironment": "node"
   },
   "dependencies": {
     "jest": "^29.7.0",
