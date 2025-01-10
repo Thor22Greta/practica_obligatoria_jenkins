@@ -34,7 +34,8 @@
         "groups": ["builtin", "external", "internal"],
         "newlines-between": "always"
       }
-    ]
+    ],
+    "react/no-unknown-property": "off"  // Añadido para desactivar la regla
   },
   "settings": {
     "react": {
