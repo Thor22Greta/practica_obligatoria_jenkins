@@ -1,12 +1,10 @@
-import { usersRepo } from "helpers/users-repo";
-
-export default handler;
+import { usersRepo } from "../../../helpers/users-repo";
 
 function handler(req, res) {
   switch (req.method) {
-    case 'GET':
+    case "GET":
       return getUserById();
-    case 'PUT':
+    case "PUT":
       return updateUser();
     case "DELETE":
       return deleteUser();
@@ -15,7 +13,7 @@ function handler(req, res) {
   }
 
   function getUserById() {
-    var user = usersRepo.getById(req.query.id);
+    const user = usersRepo.getById(req.query.id);
     return res.status(200).json(user);
   }
 
@@ -33,3 +31,5 @@ function handler(req, res) {
     return res.status(200).json({});
   }
 }
+
+export default handler;
