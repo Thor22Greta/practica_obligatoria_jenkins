@@ -3,13 +3,14 @@ pipeline {
     tools {
         nodejs 'Node Js'
     }
- 
+
     environment {
         BOT_TOKEN = credentials('BotToken')
         VERCEL_ORG_ID = credentials('ORG_ID_VERCEL')
         VERCEL_PROJECT_ID = credentials('PROJECT_ID_VERCEL')
         VERCEL_TOKEN = credentials('TOKEN_VERCEL')
     }
+
     parameters {
         string(name: 'executor', defaultValue: 'Edgar Montagud', description: 'Executor de la tasca')
         string(name: 'motiu', defaultValue: 'missatge', description: 'Motíu per el qual estem executant la pipeline')
@@ -88,8 +89,7 @@ pipeline {
                 }
             }
         }
-
-    
+    } 
 
     post {
         always {
@@ -98,5 +98,5 @@ pipeline {
                 sh "node ./jenkinsScripts/indexNotificationTelegram.js '${env.chatId}' '${env.RESULT_LINTER}' '${env.RESULT_TEST_JEST}' '${env.RESULT_UPDATE_README}' '${env.RESULT_DEPLOY}'"
             }
         }
-    }
-}
+    } 
+} 
