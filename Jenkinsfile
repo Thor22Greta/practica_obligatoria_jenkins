@@ -46,7 +46,9 @@ pipeline {
 
         stage('Test') {
             steps {
-                echo 'Skipping Cypress tests for now.'
+                script {
+                    env.RESULT_TEST_JEST = sh(script: 'npm run test', returnStatus: true)
+                }
             }
         }
 
