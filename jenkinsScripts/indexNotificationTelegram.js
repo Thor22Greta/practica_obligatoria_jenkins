@@ -16,10 +16,10 @@ console.log(`
 
 //Gestió de les dades que ens retorna cada stage, per a pintar-ho bonico al telegram.
 
-(LINTER_RESULT.toString() === '0') ? LINTER_RESULT = 'Linter s´ha executat exitosament - ✅' : LINTER_RESULT = 'Linter ha trobat errors - ❌';
-(TEST_RESULT.toString() === '0') ? TEST_RESULT = 'Tests s´han executat exitosament - ✅' : TEST_RESULT = 'Tests han fallat - ❌';
-(UPDATE_README_RESULT.toString() === '0') ? UPDATE_README_RESULT = 'Update_readme s´ha executat exitosament - ✅' : UPDATE_README_RESULT = 'Update_readme ha fallat - ❌';
-(DEPLOY_RESULT.toString() === '0') ? DEPLOY_RESULT = 'Deploy_to_Verce s´ha executat exitosament - ✅' : DEPLOY_RESULT = 'Deploy_to_Verce ha fallat - ❌';
+(LINTER_RESULT.toString() === '0') ? LINTER_RESULT = 'Linter - ✅' : LINTER_RESULT = 'Linter falla - ❌';
+(TEST_RESULT.toString() === '0') ? TEST_RESULT = 'Tests - ✅' : TEST_RESULT = 'Tests fallen - ❌';
+(UPDATE_README_RESULT.toString() === '0') ? UPDATE_README_RESULT = 'Update_readme - ✅' : UPDATE_README_RESULT = 'Update_readme falla - ❌';
+(DEPLOY_RESULT.toString() === '0') ? DEPLOY_RESULT = 'Deploy_to_Verce - ✅' : DEPLOY_RESULT = 'Deploy_to_Verce falla - ❌';
 
 //Template
 
